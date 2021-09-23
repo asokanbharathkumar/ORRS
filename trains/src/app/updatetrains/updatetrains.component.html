@@ -1,0 +1,26 @@
+<div class="aaa"><h3>UPDATE TRAIN DETAILS</h3>
+<form [formGroup]="editResto" (ngSubmit)="collection()" >
+    <div class="form-group">
+        <label >TRAIN NUMBER:-</label>
+        <input type="text" class="form-control" placeholder="ENTER THE TRAIN NUMBER YOU WANT TO UPDATE..." formControlName="train_id">
+    </div>
+    <div class="form-group">
+        <label >TRAIN NAME:-</label>
+        <input type="text" class="form-control" placeholder="ENTER TRAIN NAME TO UPDATE..." formControlName="train_name">
+    </div>
+    <div class="form-group">
+        <label >SOURCE STATION:-</label>
+        <input type="text" class="form-control" placeholder="ENTER SOURCE STATION TO UPDATE..." formControlName="from">
+    </div>
+    <div class="form-group">
+        <label >DESTINATION STATION:-</label>
+        <input type="text" class="form-control" placeholder="ENTER DESTINATION STATION TO UPDATE..." formControlName="to">
+    </div>
+    <div class="form-group">
+        <label >FARE:-</label>
+        <input type="text" class="form-control" placeholder="ENTER FARE TO UPDATE..." formControlName="fare">
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+    </div>
+

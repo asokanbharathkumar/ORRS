@@ -1,0 +1,24 @@
+<div class="fff"><form [formGroup]="addResto" (ngSubmit)="collectResto()">
+    <div class="form-group">
+        <label >TRAIN NUMBER:-</label>
+        <input type="text" class="form-control" placeholder="TYPE TO ADD TRAIN NUMBER...." formControlName="train_id">
+    </div>
+    <div class="form-group">
+        <label >TRAIN NAME:-</label>
+        <input type="text" class="form-control" placeholder="TYPE TO ADD TRAIN NAME...." formControlName="train_name">
+    </div>
+    <div class="form-group">
+        <label >SOURCE STATION:-</label>
+        <input type="text" class="form-control" placeholder="TYPE TO ADD SOURCE STATION...." formControlName="from">
+    </div>
+    <div class="form-group">
+        <label >DESTINATION STATION:-</label>
+        <input type="text" class="form-control" placeholder="TYPE TO ADD DESTINATION STATION...." formControlName="to">
+    </div>
+    <div class="form-group">
+        <label >FARE:-</label>
+        <input type="text" class="form-control" placeholder="TYPE TO ADD FARE DETAILS...." formControlName="fare">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>
