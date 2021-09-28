@@ -8,19 +8,34 @@ import { TrainComponent } from './train/train.component';
 import { AddtrainsComponent } from './addtrains/addtrains.component';
 import { UpdatetrainsComponent } from './updatetrains/updatetrains.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { ReservationComponent } from './reservation/reservation.component';
+import { DetailsComponent } from './details/details.component';
+import { AdminComponent } from './admin/admin.component';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { ContactComponent } from './contact/contact.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     TrainComponent,
     AddtrainsComponent,
-    UpdatetrainsComponent
+    UpdatetrainsComponent,
+    HomeComponent,
+    ReservationComponent,
+    DetailsComponent,
+    AdminComponent,
+    ScheduleComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
