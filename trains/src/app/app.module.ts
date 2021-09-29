@@ -11,10 +11,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { ReservationComponent } from './reservation/reservation.component';
-import { DetailsComponent } from './details/details.component';
 import { AdminComponent } from './admin/admin.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { ContactComponent } from './contact/contact.component';
+import { DetailsComponent } from './details/details.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { ContactComponent } from './contact/contact.component';
     AdminComponent,
     ScheduleComponent,
     ContactComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

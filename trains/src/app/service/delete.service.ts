@@ -9,6 +9,13 @@ export class bookingorder {
     public  quantity: String,
     public  startStation: String,
     public  endStation: String,
+    public name:String,
+  	public  age:String,
+  	public  gender:String,
+	  public  credit:String,
+	  public  address:String,
+	  public  berth:String,
+	  public  bankname:String
   ) {
   }
 }

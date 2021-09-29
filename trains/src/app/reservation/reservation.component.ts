@@ -13,7 +13,14 @@ export class ReservationComponent implements OnInit {
         id: new FormControl(''),
         quantity: new FormControl(''),
         startStation: new FormControl(''),
-        endStation:new FormControl('') 
+        endStation:new FormControl(''),
+        name:new FormControl(''),
+  	    age:new FormControl(''),
+  	    gender:new FormControl(''),
+  	    credit:new FormControl(''),
+	      address:new FormControl(''),
+	      berth:new FormControl(''),
+	      bankname:new FormControl(''),
     })
     constructor(private httpClientService: UserServiceService) { }
   
@@ -25,8 +32,6 @@ export class ReservationComponent implements OnInit {
       this.httpClientService.saveResto(this.bookSeats.value).subscribe((result: any)=>{
       console.warn("result",result)})
     }
-  
-
 
   }
     

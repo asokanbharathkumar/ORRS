@@ -21,7 +21,7 @@ public getbookbyid(){
 deleteResto(id: any)
   {
     this.httpClientService.deleteResto(id).subscribe((result: any)=>{
-      console.warn("result",result)
+    console.warn("result",result)
     })
   }
 

@@ -5,10 +5,11 @@ import { AddtrainsComponent } from './addtrains/addtrains.component';
 import { UpdatetrainsComponent } from './updatetrains/updatetrains.component';
 import { HomeComponent } from './home/home.component';
 import { ReservationComponent } from './reservation/reservation.component';
-import { DetailsComponent } from './details/details.component';
 import { AdminComponent } from './admin/admin.component';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { DetailsComponent } from './details/details.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path:'',redirectTo:"home",pathMatch:"full"},
@@ -20,9 +21,9 @@ const routes: Routes = [
   {path: 'details',component:DetailsComponent},
   {path: 'Admin',component:AdminComponent},
   {path: 'schedule',component:ScheduleComponent},
-  {path: 'contact',component:ContactComponent}
+  {path: 'contact',component:ContactComponent},
+  {path: 'adminlogin',component:LoginComponent}
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

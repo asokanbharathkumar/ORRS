@@ -26,19 +26,33 @@
 <table class="table table-hover">
   <thead>
   <tr>
-    <th>TRAIN NUMBER</th>
+    <th>PNR NUMBER</th>
+    <th>PASSENGER NAME</th>
+    <th>AGE</th>
+    <th>GENDER</th>
+    <th>ADDRESS</th>
     <th>QUANTITY</th>
     <th>SOURCE STATION</th>
-    <th> DESTINATION STATION</th>
-    <th>CONTROLS</th>
+    <th>DESTINATION STATION</th>
+    <th>CLASS</th>
+    <th>CREDIT NUMBER</th>
+    <th>BANK NAME</th>
+    <th>CANCEL</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngIf="bookingorder" >
     <td><span>{{bookingorder.id}}</span></td>
+    <td><span>{{bookingorder.name}}</span></td>
+    <td><span>{{bookingorder.age}}</span></td>
+    <td><span>{{bookingorder.gender}}</span></td>
+    <td><span>{{bookingorder.address}}</span></td>
     <td><span>{{bookingorder.quantity}}</span></td>
     <td><span>{{bookingorder.startStation}}</span></td>
     <td><span>{{bookingorder.endStation}}</span></td>
+    <td><span>{{bookingorder.berth}}</span></td>
+    <td><span>{{bookingorder.credit}}</span></td>
+    <td><span>{{bookingorder.bankname}}</span></td>
     <th><a class="cde"><i (click)="deleteResto(bookingorder.id)"> CANCEL TICKET</i></a>
       </th>
   </tr>
