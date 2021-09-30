@@ -8,13 +8,17 @@ export class orders {
     public  quantity: String,
     public  startStation: String,
     public  endStation: String,
+    public  date:String,
     public  name:String,
   	public  age:String,
   	public  gender:String,
 	  public  credit:String,
 	  public  address:String,
 	  public  berth:String,
-	  public  bankname:String
+	  public  bankname:String,
+    public  email:String,
+    public  phone:String,
+
   ) {
   }
 }

@@ -17,6 +17,8 @@ import com.example.demo.model.*;
 import com.example.demo.service.UserService;
 import com.example.demo.utils.JwtUtils;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 @CrossOrigin("http://localhost:4200")
 @RestController
 public class AuthController {

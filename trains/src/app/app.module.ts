@@ -16,6 +16,9 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { ContactComponent } from './contact/contact.component';
 import { DetailsComponent } from './details/details.component';
 import { LoginComponent } from './login/login.component';
+import { UserloginComponent } from './userlogin/userlogin.component';
+import { RegisteruserComponent } from './registeruser/registeruser.component';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -30,7 +33,10 @@ import { LoginComponent } from './login/login.component';
     AdminComponent,
     ScheduleComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
+    UserloginComponent,
+    RegisteruserComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

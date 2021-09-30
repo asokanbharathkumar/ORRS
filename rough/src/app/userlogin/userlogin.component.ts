@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AserviceService } from '../service/aservice.service';
+import { PassengerloginService } from '../service/passengerlogin.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-userlogin',
+  templateUrl: './userlogin.component.html',
+  styleUrls: ['./userlogin.component.css']
 })
-export class LoginComponent implements OnInit {
+export class UserloginComponent implements OnInit {
   x: any;
 
   adminlog=new FormGroup(
@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
         password: new FormControl(''),
         
     })
-    constructor(private httpClientService: AserviceService,private router:Router) { }
+    constructor(private httpClientService: PassengerloginService,private router:Router) { }
   
     ngOnInit(): void {
     }
@@ -35,11 +35,10 @@ export class LoginComponent implements OnInit {
         }
         else
         {
-          
+          alert("correct password");
           (<any>this.router).navigate(["/admin"]) 
                 
         }
     })
     }
-  }
-    
+  } 

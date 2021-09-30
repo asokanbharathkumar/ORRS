@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
         if(this.x.response=="no"){
           
           (<any>this.router).navigate(["/adminlogin"])  
-          alert("enter correct password");
+          alert("Please Enter Correct Password");
         }
         else
         {

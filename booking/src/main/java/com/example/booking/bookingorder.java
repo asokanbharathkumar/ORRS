@@ -23,6 +23,9 @@ public class bookingorder {
 	private String address;
 	private String berth;
 	private String bankname;
+	private String Date;
+	private String email;
+	private String phone;
 
 	
 	
@@ -33,7 +36,8 @@ public class bookingorder {
 
 
 	public bookingorder(String id, String quantity, String startStation, String endStation, String name, String age,
-			String gender, String credit, String address, String berth, String bankname) {
+			String gender, String credit, String address, String berth, String bankname, String date, String email,
+			String phone) {
 		super();
 		this.id = id;
 		this.quantity = quantity;
@@ -46,6 +50,9 @@ public class bookingorder {
 		this.address = address;
 		this.berth = berth;
 		this.bankname = bankname;
+		Date = date;
+		this.email = email;
+		this.phone = phone;
 	}
 
 
@@ -182,12 +189,50 @@ public class bookingorder {
 
 
 
+	public String getDate() {
+		return Date;
+	}
+
+
+
+	public void setDate(String date) {
+		Date = date;
+	}
+
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+
+	public String getPhone() {
+		return phone;
+	}
+
+
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+
+
 	@Override
 	public String toString() {
 		return "bookingorder [id=" + id + ", quantity=" + quantity + ", startStation=" + startStation + ", endStation="
 				+ endStation + ", name=" + name + ", age=" + age + ", gender=" + gender + ", credit=" + credit
-				+ ", address=" + address + ", berth=" + berth + ", bankname=" + bankname + "]";
+				+ ", address=" + address + ", berth=" + berth + ", bankname=" + bankname + ", Date=" + Date + ", email="
+				+ email + ", phone=" + phone + "]";
 	}
+
 
 
 }

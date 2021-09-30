@@ -1,18 +1,15 @@
 <div class="bha">
   <h3>PAKISTAN RAILWAY RESERVATION SYSTEM</h3>
   <div class="topnav">
-      <a routerLink="/home">Home</a>
       <a routerLink="/reserve">Reservation</a>
-      <a routerLink="/details">Cancellation</a>
-      <a routerLink="/schedule">Schedule</a>
-      <a routerLink="/contact">Contact</a>
-    <div class="topnav-right"><a routerLink="/Admin">Admin</a></div>
+      <a routerLink="/user">User Home</a>
+    <div class="topnav-right"><a routerLink="/home">Logout</a></div>
     </div></div>
 <div class="container">
   <div class="row">
     <div id="custom-search-input">
         <div class="input-grout col-md-12" style="text-align:center">
-          <input type="text" class="search-query form-control" placeholder="search with id" name="id" [(ngModel)]="id"/>
+          <input type="text" class="search-query form-control" placeholder="Enter Your PNR Number" name="id" [(ngModel)]="id"/>
           <span class="input-hroup-btn">
             <button class="btn btn-danger" type="button" (click)="getbookbyid()">search
               <span class=" glyphicon glyphicon-search"></span>
@@ -30,10 +27,12 @@
     <th>PASSENGER NAME</th>
     <th>AGE</th>
     <th>GENDER</th>
+    <th>MOBILE NUMBER</th>
+    <th>EMAIL ID</th>
     <th>ADDRESS</th>
-    <th>QUANTITY</th>
     <th>SOURCE STATION</th>
     <th>DESTINATION STATION</th>
+    <th>JOURNEY dATE</th>
     <th>CLASS</th>
     <th>CREDIT NUMBER</th>
     <th>BANK NAME</th>
@@ -46,10 +45,12 @@
     <td><span>{{bookingorder.name}}</span></td>
     <td><span>{{bookingorder.age}}</span></td>
     <td><span>{{bookingorder.gender}}</span></td>
+    <td><span>{{bookingorder.phone}}</span></td>
+    <td><span>{{bookingorder.email}}</span></td>
     <td><span>{{bookingorder.address}}</span></td>
-    <td><span>{{bookingorder.quantity}}</span></td>
     <td><span>{{bookingorder.startStation}}</span></td>
     <td><span>{{bookingorder.endStation}}</span></td>
+    <td><span>{{bookingorder.date}}</span></td>
     <td><span>{{bookingorder.berth}}</span></td>
     <td><span>{{bookingorder.credit}}</span></td>
     <td><span>{{bookingorder.bankname}}</span></td>

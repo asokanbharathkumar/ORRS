@@ -26,6 +26,7 @@ export class AddtrainsComponent implements OnInit {
       //console.warn(this.addResto.value)
       this.httpClientService.saveResto(this.addResto.value).subscribe((result: any)=>{
       console.warn("result",result)})
+      alert("successfully Added new train details")
     }
   
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserServiceService } from '../service/user-service.service';
 
 @Component({
@@ -14,6 +15,7 @@ export class ReservationComponent implements OnInit {
         quantity: new FormControl(''),
         startStation: new FormControl(''),
         endStation:new FormControl(''),
+        date:new FormControl(''),
         name:new FormControl(''),
   	    age:new FormControl(''),
   	    gender:new FormControl(''),
@@ -22,7 +24,7 @@ export class ReservationComponent implements OnInit {
 	      berth:new FormControl(''),
 	      bankname:new FormControl(''),
     })
-    constructor(private httpClientService: UserServiceService) { }
+    constructor(private httpClientService: UserServiceService,private router:Router) { }
   
     ngOnInit(): void {
     }
@@ -31,6 +33,7 @@ export class ReservationComponent implements OnInit {
       //console.warn(this.addResto.value)
       this.httpClientService.saveResto(this.bookSeats.value).subscribe((result: any)=>{
       console.warn("result",result)})
+
     }
 
   }

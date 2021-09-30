@@ -1,3 +1,15 @@
+<div class="bha">
+    <h3>PAKISTAN RAILWAY RESERVATION SYSTEM</h3>
+    <div class="topnav">
+        <a routerLink="/home">Home</a>
+        <a routerLink="/schedule">Schedule</a>
+        <a routerLink="/contact">Contact Us</a>
+        
+      <div class="topnav-right">
+        <a routerLink="/userreg">User Register</a>
+        <a routerLink="/userlogin">User Login</a>        
+      </div>
+      </div></div>
 <form [formGroup]="adminlog" (ngSubmit)="validate()">
   <div class="form-group">
       <label >username</label>
@@ -8,7 +20,7 @@
       <input type="password" class="form-control" placeholder="Enter password" formControlName="password">
   </div>
   
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Login</button>
   </form>
   
  
