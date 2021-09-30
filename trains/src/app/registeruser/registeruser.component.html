@@ -17,7 +17,7 @@
       <div class="form_container">
         <div class="title_container">
           <h4>USER REGISTRATION FORM</h4>
-<form [formGroup]="adminlog" (ngSubmit)="validate()">
+<form #userForm="ngForm" [formGroup]="adminlog" (ngSubmit)="validate()">
   <div class="form-group">
     <label >Name</label>
     <input type="text" required name="username" class="form-control" placeholder="Enter Your Full Name" formControlName="name" >

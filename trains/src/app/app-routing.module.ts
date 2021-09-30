@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisteruserComponent } from './registeruser/registeruser.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { UserComponent } from './user/user.component';
+import { PnrComponent } from './pnr/pnr.component';
 
 const routes: Routes = [
   {path:'',redirectTo:"home",pathMatch:"full"},
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path: 'adminlogin',component:LoginComponent},
   {path:"userreg",component:RegisteruserComponent},
   {path:"userlogin",component:UserloginComponent},
-  {path:"user",component:UserComponent}
+  {path:"user",component:UserComponent},
+  {path:"pnr",component:PnrComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

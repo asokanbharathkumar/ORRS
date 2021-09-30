@@ -19,6 +19,7 @@ import { LoginComponent } from './login/login.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { RegisteruserComponent } from './registeruser/registeruser.component';
 import { UserComponent } from './user/user.component';
+import { PnrComponent } from './pnr/pnr.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { UserComponent } from './user/user.component';
     LoginComponent,
     UserloginComponent,
     RegisteruserComponent,
-    UserComponent
+    UserComponent,
+    PnrComponent
   ],
   imports: [
     BrowserModule,

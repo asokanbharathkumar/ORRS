@@ -1,3 +1,25 @@
+.bbb{
+  padding-top: 200px;
+  padding-left: 500px;
+  
+}
+.ccc{
+  border: 2px solid ;
+  padding: 40px;
+}
+
+.ddd{
+  background-color: rgb(84, 243, 97);
+  
+}
+.ddd:hover{
+  background-color: white;
+}
+
+.ggg{
+  text-align: center;
+}
+
 .topnav {
   background-color: #333;
   overflow: hidden;
@@ -34,4 +56,3 @@ float: right;
   text-align: center;
   color: white;
 }
-

@@ -32,9 +32,9 @@ export class ReservationComponent implements OnInit {
     {
       //console.warn(this.addResto.value)
       this.httpClientService.saveResto(this.bookSeats.value).subscribe((result: any)=>{
-      console.warn("result",result)})
-
+      console.warn("result",result);
+      (<any>this.router).navigate(["/pnr"]) 
+      alert("Your Ticket Has Been Booked")
+      })
     }
-
   }
-    
