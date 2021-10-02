@@ -37,6 +37,11 @@ public class AuthController {
 	@Autowired
 	JwtUtils jwtutil;
 	
+	@GetMapping("/")
+	public String welcome() {
+		return "welcome";
+	}
+	
 	@PostMapping("/subs")
 	private ResponseEntity<AuthenticationResponse>subscribeClient(@RequestBody AuthenticationRequest authreq){
 		UserModel usermodel =new UserModel();

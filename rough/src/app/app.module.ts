@@ -5,14 +5,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PnrComponent } from './pnr/pnr.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PnrComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,

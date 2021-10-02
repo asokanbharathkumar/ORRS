@@ -23,6 +23,8 @@ export class ReservationComponent implements OnInit {
 	      address:new FormControl(''),
 	      berth:new FormControl(''),
 	      bankname:new FormControl(''),
+        email:new FormControl(''),
+        phone:new FormControl(''),
     })
     constructor(private httpClientService: UserServiceService,private router:Router) { }
   

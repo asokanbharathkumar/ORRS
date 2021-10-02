@@ -12,7 +12,6 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { AdminComponent } from './admin/admin.component';
-import { ScheduleComponent } from './schedule/schedule.component';
 import { ContactComponent } from './contact/contact.component';
 import { DetailsComponent } from './details/details.component';
 import { LoginComponent } from './login/login.component';
@@ -20,6 +19,7 @@ import { UserloginComponent } from './userlogin/userlogin.component';
 import { RegisteruserComponent } from './registeruser/registeruser.component';
 import { UserComponent } from './user/user.component';
 import { PnrComponent } from './pnr/pnr.component';
+import { TraindataComponent } from './traindata/traindata.component';
 
 
 @NgModule({
@@ -32,13 +32,13 @@ import { PnrComponent } from './pnr/pnr.component';
     ReservationComponent,
     DetailsComponent,
     AdminComponent,
-    ScheduleComponent,
     ContactComponent,
     LoginComponent,
     UserloginComponent,
     RegisteruserComponent,
     UserComponent,
-    PnrComponent
+    PnrComponent,
+    TraindataComponent,
   ],
   imports: [
     BrowserModule,

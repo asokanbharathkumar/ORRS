@@ -23,7 +23,9 @@ deleteResto(id: any)
   {
     this.httpClientService.deleteResto(id).subscribe((result: any)=>{
     console.warn("result",result)
-    
+      alert("ticket canceled");
+      (<any>this.router).navigate(["/user"])
+      
     })
   }
 

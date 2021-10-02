@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { HttpClientService } from '../service/http-client.service';
 
 @Component({
@@ -15,9 +16,10 @@ export class AddtrainsComponent implements OnInit {
         train_name: new FormControl(''),
         from: new FormControl(''),
         to:new FormControl('') ,
-        fare: new FormControl('')
+        fare: new FormControl(''),
+        gen: new FormControl(''),
     })
-    constructor(private httpClientService: HttpClientService) { }
+    constructor(private httpClientService: HttpClientService,private router:Router) { }
   
     ngOnInit(): void {
     }
@@ -26,7 +28,8 @@ export class AddtrainsComponent implements OnInit {
       //console.warn(this.addResto.value)
       this.httpClientService.saveResto(this.addResto.value).subscribe((result: any)=>{
       console.warn("result",result)})
-      alert("successfully Added new train details")
+      alert("successfully Added new train details");
+      (<any>this.router).navigate(["/Admin"]) 
     }
   
   }

@@ -38,5 +38,19 @@ export class RegisteruserComponent implements OnInit {
         alert("register successful")
     })
     }
+    
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+  

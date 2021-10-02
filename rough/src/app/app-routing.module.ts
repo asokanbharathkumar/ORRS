@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PnrComponent } from './pnr/pnr.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 
 const routes: Routes = [
-  {path:"pnr",component:PnrComponent}
-  
+  {path:"reserve",component:ReservationComponent},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  
+
+}

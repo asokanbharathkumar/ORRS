@@ -20,6 +20,11 @@ public class bookingcontroller {
 	
 	@Autowired 
 	private bookingrepository bookrepository;
+	
+	@GetMapping("/")
+	public String welcome() {
+		return "welcome";
+	}
 
 	@PostMapping("/orders/addOrder")
 	public String saveBook(@RequestBody bookingorder book) {
@@ -47,6 +52,6 @@ public class bookingcontroller {
 	 @DeleteMapping("/orders/delete/{id}")
 	 public String deleteOrder (@PathVariable String id) {
 	  bookrepository.deleteById(id);
-		return "Order deleted with id : "+id;
+		return null;
 		}
 	}

@@ -1,17 +1,19 @@
-<div class="bha">
-  <h3>PAKISTAN RAILWAY RESERVATION SYSTEM</h3>
+<div class="bha"><h2><marquee>WELCOME TO PAKISTAN RAILWAY RESERVATION SYSTEM</marquee></h2>
   <div class="topnav">
       <a routerLink="/reserve">Reservation</a>
       <a routerLink="/user">User Home</a>
     <div class="topnav-right"><a routerLink="/home">Logout</a></div>
-    </div></div>
+    </div></div><br>
+
+
 <div class="container">
   <div class="row">
     <div id="custom-search-input">
         <div class="input-grout col-md-12" style="text-align:center">
-          <input type="text" class="search-query form-control" placeholder="Enter Your PNR Number" name="id" [(ngModel)]="id"/>
-          <span class="input-hroup-btn">
-            <button class="btn btn-danger" type="button" (click)="getbookbyid()">search
+          <input type="text" class="search-query form-control" placeholder="Enter Your PNR Number" name="id" [(ngModel)]="id" minlength="3" maxlength="40" />
+          <span class="input-hroup-btn"><br>
+                       
+            <button class="btn btn-danger btn-lg" type="button" (click)="getbookbyid()"> search 
               <span class=" glyphicon glyphicon-search"></span>
             </button>
           </span>
@@ -19,43 +21,98 @@
     </div>
   </div>
 </div>
+<br>
 
-<table class="table table-hover">
-  <thead>
-  <tr>
-    <th>PNR NUMBER</th>
-    <th>PASSENGER NAME</th>
-    <th>AGE</th>
-    <th>GENDER</th>
-    <th>MOBILE NUMBER</th>
-    <th>EMAIL ID</th>
-    <th>ADDRESS</th>
-    <th>SOURCE STATION</th>
-    <th>DESTINATION STATION</th>
-    <th>JOURNEY dATE</th>
-    <th>CLASS</th>
-    <th>CREDIT NUMBER</th>
-    <th>BANK NAME</th>
-    <th>CANCEL</th>
+<details>
+         <summary>     Click Here To View Your Ticket Details</summary>
+<div class="peaco">
+<div class="container">
+  <div class="row">
+
+    <div id="custom-search-input">
+      <div class="fooo"> <h1>TICKET DETAILS</h1> </div>
+
+      <tbody>
+
+  <tr *ngIf="bookingorder" ><br>
+  <br>
+  <h4><pre>PNR NUMBER                    :-{{bookingorder.id}}</pre><br>
+  <pre>PASSENGER NAME                :-{{bookingorder.name}}</pre><br>
+  <pre>AGE                           :-{{bookingorder.age}}</pre><br>
+  <pre>GENDER                        :-{{bookingorder.gender}}</pre><br>
+  <pre>MOBILE NUMBER                 :-{{bookingorder.phone}}</pre><br>
+  <pre>EMAIL ID                      :-{{bookingorder.email}}</pre><br>
+  <pre>ADDRESS                       :-{{bookingorder.address}}</pre><br>
+  <pre>SOURCE STATION                :-{{bookingorder.startStation}}</pre><br>
+  <pre>END STATION                   :-{{bookingorder.endStation}}</pre><br>
+  <pre>JOURNEY DATE                  :-{{bookingorder.date}}</pre><br>
+  <pre>BERTH                         :-{{bookingorder.berth}}</pre><br>
+  <pre>CREDIT CARD NUMBER            :-{{bookingorder.credit}}</pre><br>
+  <pre>BANK NAME                     :-{{bookingorder.bankname}}</pre></h4><br><br><br>
+  <div class="center"> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+  <button class="btn btn-success btn-lg"><i (click)="deleteResto(bookingorder.id)"> CANCEL TICKET</i></button>
+  
+    </div>
   </tr>
-  </thead>
-  <tbody>
-  <tr *ngIf="bookingorder" >
-    <td><span>{{bookingorder.id}}</span></td>
-    <td><span>{{bookingorder.name}}</span></td>
-    <td><span>{{bookingorder.age}}</span></td>
-    <td><span>{{bookingorder.gender}}</span></td>
-    <td><span>{{bookingorder.phone}}</span></td>
-    <td><span>{{bookingorder.email}}</span></td>
-    <td><span>{{bookingorder.address}}</span></td>
-    <td><span>{{bookingorder.startStation}}</span></td>
-    <td><span>{{bookingorder.endStation}}</span></td>
-    <td><span>{{bookingorder.date}}</span></td>
-    <td><span>{{bookingorder.berth}}</span></td>
-    <td><span>{{bookingorder.credit}}</span></td>
-    <td><span>{{bookingorder.bankname}}</span></td>
-    <th><a class="cde"><i (click)="deleteResto(bookingorder.id)"> CANCEL TICKET</i></a>
-      </th>
-  </tr>
-  </tbody>
-</table>
+  </tbody></div>
+</div></div>
+<br>
+<button class="btn" title="Print Screen" alt="Print Screen" onclick="window.print();"    target="_blank" style="cursor:pointer;">CLICK HERE TO PRINT TICKET!</button>
+
+
+
+</div>
+<br><br>
+
+</details><br><br><br>
+
+<h3 class="pop">Important Contents</h3>
+<footer class="footer">
+  <div class="container">
+    
+    <div class="row">
+      
+      <div class="footer-col">
+        
+        <ul>
+          <li><a href="#">PRCTC Trains </a></li>
+          <li><a href="#">General Information</a></li>
+          <li><a href="#">Important Information</a></li>
+          <li><a href="#">Agents</a></li>
+          <li><a href="#">Enquiries</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">shipping</a></li>
+          <li><a href="#">Advertise with us</a></li>
+          <li><a href="#">Refund Rules</a></li>
+          <li><a href="#">PRCTC Official App</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        
+        <ul>
+          <li><a href="#">For Newly Migrated Agents</a></li>
+          <li><a href="#">Mobile Zone</a></li>
+          <li><a href="#">Integration Policy</a></li>
+          <li><a href="#">How To</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Youtube</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
-export class bookingorder {
+
+export class orders {
   constructor(
     public  id: String,
     public  quantity: String,
     public  startStation: String,
     public  endStation: String,
-    public  date: String,
+    public  date:String,
     public  name:String,
   	public  age:String,
   	public  gender:String,
@@ -17,26 +18,21 @@ export class bookingorder {
 	  public  bankname:String,
     public  email:String,
     public  phone:String,
+
   ) {
   }
 }
 
-
 @Injectable({
   providedIn: 'root'
 })
-export class PnrService {
-  constructor(private httpClient: HttpClient) { }
+export class UserServiceService {
+  [x: string]: any;
 
-  getorders()
+  constructor(private httpClient: HttpClient) {
+ }
+ saveResto(data: any)
   {
-    return this.httpClient.get<bookingorder[]>('http://localhost:8081/orders') 
-   }
-
-  
+     return this.httpClient.post<orders[]>('http://localhost:8081/orders/addOrder',data)
+  }
 }
-
-
-
-
-

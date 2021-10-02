@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClientService } from '../service/http-client.service';
 
 @Component({
@@ -9,16 +9,18 @@ import { HttpClientService } from '../service/http-client.service';
   styleUrls: ['./updatetrains.component.css']
 })
 export class UpdatetrainsComponent implements OnInit {
+ 
   editResto=new FormGroup(
     {
       train_id: new FormControl(''),
       train_name: new FormControl(''),
       from: new FormControl(''),
       to:new FormControl('') ,
-      fare: new FormControl('')
+      fare: new FormControl(''),
+      gen: new FormControl('')
     })
 
-  constructor(private router:ActivatedRoute,private httpClientService: HttpClientService) { }
+  constructor(private router:ActivatedRoute,private httpClientService: HttpClientService,private rout:Router) { }
 
   ngOnInit(): void {
    // console.warn(this.router.snapshot.params.id)
@@ -33,6 +35,8 @@ export class UpdatetrainsComponent implements OnInit {
    // console.warn(this.editResto.value);
     this.httpClientService.updateResto(this.router.snapshot.params.id,this.editResto.value).subscribe((result: any)=>{
       console.warn(result)
+      alert("successfully Updated train details");
+      (<any>this.rout).navigate(["/Admin"]) 
     })
   }
 

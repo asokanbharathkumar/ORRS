@@ -14,7 +14,8 @@ export class PnrComponent implements OnInit {
 
   ngOnInit(): void {
     let ord=this.httpClientService.getorders();
-    ord.subscribe((data)=>this.train=data); 
+    ord.subscribe((data)=>this.train=data);
+    
   }
 
 }

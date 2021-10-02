@@ -11,18 +11,20 @@ public class Train {
 	 public String from;
 	 public String to;
 	 public int fare;
+	 public int gen;
 	 
 	 public Train() {
 		 
 	 }
 
-	public Train(int train_id, String train_name, String from, String to, int fare) {
+	public Train(int train_id, String train_name, String from, String to, int fare, int gen) {
 		super();
 		this.train_id = train_id;
 		this.train_name = train_name;
 		this.from = from;
 		this.to = to;
 		this.fare = fare;
+		this.gen = gen;
 	}
 
 	public int getTrain_id() {
@@ -65,11 +67,19 @@ public class Train {
 		this.fare = fare;
 	}
 
+	public int getGen() {
+		return gen;
+	}
+
+	public void setGen(int gen) {
+		this.gen = gen;
+	}
+
 	@Override
 	public String toString() {
 		return "Train [train_id=" + train_id + ", train_name=" + train_name + ", from=" + from + ", to=" + to
-				+ ", fare=" + fare + "]";
+				+ ", fare=" + fare + ", gen=" + gen + "]";
 	}
-	 
-	 
+
+	
 }

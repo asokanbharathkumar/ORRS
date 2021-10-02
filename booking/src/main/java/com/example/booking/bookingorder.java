@@ -28,7 +28,6 @@ public class bookingorder {
 	private String phone;
 
 	
-	
 	public bookingorder() {
 		
 	}
