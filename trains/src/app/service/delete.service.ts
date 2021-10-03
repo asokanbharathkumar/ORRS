@@ -6,7 +6,6 @@ import { Observable } from 'rxjs';
 export class bookingorder {
   constructor(
     public  id: String,
-    public  quantity: String,
     public  startStation: String,
     public  endStation: String,
     public  date: String,
@@ -19,6 +18,9 @@ export class bookingorder {
 	  public  bankname:String,
     public  email:String,
     public  phone:String,
+    public  cvv:String,
+    public  month:String,
+    public  year:String,
   ) {
   }
 }

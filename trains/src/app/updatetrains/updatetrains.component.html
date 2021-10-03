@@ -1,11 +1,14 @@
-<div class="bha"><h2><marquee>PAKISTAN RAILWAY RESERVATION SYSTEM</marquee></h2>
+<div class="bha"><h2><marquee>PAKISTAN RAILWAY RESERVATION SYSTEM</marquee></h2></div>
     <div class="topnav">
         
         <a routerLink="/Admin">Admin Home</a>
-      <div class="topnav-right"><a routerLink="/home">Logout</a></div>
-      </div></div>
-
-    <div class="container">
+      <div class="topnav-right"><a routerLink="#">Welcome asokan</a><a routerLink="/home">Logout</a></div>
+      </div>
+      <div style="background-color: rgb(57, 114, 114);">
+      <div class="container mt-10 mb-10 d-flex justify-content-center">
+        
+        <div class="card px-2 ">
+            <div class="card-body">
         
         <div class="aaa"><h3>UPDATE TRAIN DETAILS</h3>
           <form [formGroup]="editResto" (ngSubmit)="collection()" >
@@ -33,11 +36,19 @@
                 <label >General Fare</label>
                 <input type="text" class="form-control" placeholder="Update General Fare" formControlName="gen">
             </div>
+            <div class="form-group">
+              <label >Running Days</label>
+              <input type="text" class="form-control" placeholder="Update Running Days" formControlName="running">
+          </div>
+          <div class="form-group">
+            <label >Running Time</label>
+            <input type="text" class="form-control" placeholder="Update Running Time" formControlName="time">
+        </div>
               <button type="submit" class="btn btn-primary">Update</button>
               </form>
               </div>
         
-            </div>
+            </div></div></div></div>
         
         <h3 class="pop">Important Contents</h3>
         <footer class="footer">

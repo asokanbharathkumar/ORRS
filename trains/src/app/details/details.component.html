@@ -2,7 +2,7 @@
   <div class="topnav">
       <a routerLink="/reserve">Reservation</a>
       <a routerLink="/user">User Home</a>
-    <div class="topnav-right"><a routerLink="/home">Logout</a></div>
+    <div class="topnav-right"><a routerLink="#">Welcome asokan</a><a routerLink="/home">Logout</a></div>
     </div></div><br>
 
 
@@ -10,7 +10,8 @@
   <div class="row">
     <div id="custom-search-input">
         <div class="input-grout col-md-12" style="text-align:center">
-          <input type="text" class="search-query form-control" placeholder="Enter Your PNR Number" name="id" [(ngModel)]="id" minlength="3" maxlength="40" />
+          <input type="text" class="search-query form-control" placeholder="Enter Your PNR Number" name="id" [(ngModel)]="id" minlength="3" maxlength="30" />
+          
           <span class="input-hroup-btn"><br>
                        
             <button class="btn btn-danger btn-lg" type="button" (click)="getbookbyid()"> search 
@@ -36,19 +37,20 @@
 
   <tr *ngIf="bookingorder" ><br>
   <br>
-  <h4><pre>PNR NUMBER                    :-{{bookingorder.id}}</pre><br>
-  <pre>PASSENGER NAME                :-{{bookingorder.name}}</pre><br>
-  <pre>AGE                           :-{{bookingorder.age}}</pre><br>
-  <pre>GENDER                        :-{{bookingorder.gender}}</pre><br>
-  <pre>MOBILE NUMBER                 :-{{bookingorder.phone}}</pre><br>
-  <pre>EMAIL ID                      :-{{bookingorder.email}}</pre><br>
-  <pre>ADDRESS                       :-{{bookingorder.address}}</pre><br>
-  <pre>SOURCE STATION                :-{{bookingorder.startStation}}</pre><br>
-  <pre>END STATION                   :-{{bookingorder.endStation}}</pre><br>
-  <pre>JOURNEY DATE                  :-{{bookingorder.date}}</pre><br>
-  <pre>BERTH                         :-{{bookingorder.berth}}</pre><br>
-  <pre>CREDIT CARD NUMBER            :-{{bookingorder.credit}}</pre><br>
-  <pre>BANK NAME                     :-{{bookingorder.bankname}}</pre></h4><br><br><br>
+  <h4><pre>PNR NUMBER                    :-     {{bookingorder.id}}</pre><br>
+  <pre>PASSENGER NAME                :-     {{bookingorder.name}}</pre><br>
+  <pre>AGE                           :-     {{bookingorder.age}}</pre><br>
+  <pre>GENDER                        :-     {{bookingorder.gender}}</pre><br>
+  <pre>MOBILE NUMBER                 :-     {{bookingorder.phone}}</pre><br>
+  <pre>EMAIL ID                      :-     {{bookingorder.email}}</pre><br>
+  <pre>ADDRESS                       :-     {{bookingorder.address}}</pre><br>
+  <pre>SOURCE STATION                :-     {{bookingorder.startStation}}</pre><br>
+  <pre>END STATION                   :-     {{bookingorder.endStation}}</pre><br>
+  <pre>JOURNEY DATE                  :-     {{bookingorder.date}}</pre><br>
+  <pre>BERTH                         :-     {{bookingorder.berth}}</pre><br>
+  <pre>STATUS                        :-     CNF</pre>
+  
+  <br></h4><br><br><br>
   <div class="center"> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     
   <button class="btn btn-success btn-lg"><i (click)="deleteResto(bookingorder.id)"> CANCEL TICKET</i></button>

@@ -29,10 +29,21 @@ color: white;
 .topnav-right {
 float: right;
 }
+
 .bha{
   background-color: rgb(22, 146, 247);
   text-align: center;
   color: white;
+}
+a.cde{
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  background-color: yellow;
+}
+.zxy{
+  background-color: rgb(236, 121, 121);
 }
 
 
@@ -116,12 +127,20 @@ ul{
 	color: #24262b;
 	background-color: #ffffff;
 }
-
+label{
+	color: white;
+}
+form{
+	background-color: rgb(82, 73, 73);
+	
+}
+.lmno{
+  background-color: rgb(223, 170, 101);
+}
 .pop{
   background-color: #e91e63;
   text-align: center;
 }
-
 
 /*responsive*/
 @media(max-width: 767px){
@@ -135,3 +154,4 @@ ul{
     width: 100%;
 }
 }
+

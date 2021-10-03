@@ -5,6 +5,13 @@ export class userlogin {
   constructor(
     public  username: String,
     public  password: String,
+    public  conpassword: String,
+    public  name: String,
+    public  dob: String,
+    public  sex: String,
+    public  emailid: String,
+    public  phone: String,
+    public  address: String,
   ) {
   }
 }

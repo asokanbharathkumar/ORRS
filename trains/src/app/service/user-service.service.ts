@@ -5,7 +5,6 @@ import {HttpClient} from '@angular/common/http';
 export class orders {
   constructor(
     public  id: String,
-    public  quantity: String,
     public  startStation: String,
     public  endStation: String,
     public  date:String,
@@ -18,7 +17,9 @@ export class orders {
 	  public  bankname:String,
     public  email:String,
     public  phone:String,
-
+    public  cvv:String,
+    public  month:String,
+    public  year:String,
   ) {
   }
 }

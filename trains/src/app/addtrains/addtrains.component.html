@@ -3,7 +3,7 @@
     <div class="topnav">
         
         <a routerLink="/Admin">Admin Home</a>
-      <div class="topnav-right"><a routerLink="/home">Logout</a></div>
+      <div class="topnav-right"><a routerLink="#">Welcome bharath</a><a routerLink="/home">Logout</a></div>
       </div></div>
       
       
@@ -24,38 +24,69 @@
                     <label class="col-lg-3 col-form-label form-control-label">Train Number:-</label>
                     <div class="col-lg-9">
                       <input type="text" class="form-control" placeholder="Add New Train Number" formControlName="train_id">
+                      <span
+        style="color: red;" class="error" *ngIf="addResto.controls.train_id.touched && addResto.controls.train_id.errors"> Train Number is required</span>
                     </div>
                 </div><br>
+
                 <div class="form-group row">
                     <label class="col-lg-3 col-form-label form-control-label">Train Name:-</label>
                     <div class="col-lg-9">
                       <input type="text" class="form-control" placeholder="Add New Train Name" formControlName="train_name">
+                      <span
+        style="color: red;" class="error" *ngIf="addResto.controls.train_name.touched && addResto.controls.train_name.errors"> Train Name is required</span>
                     </div>
                 </div><br>
                 <div class="form-group row">
                     <label class="col-lg-3 col-form-label form-control-label">Source Station:-</label>
                     <div class="col-lg-9">
                       <input type="text" class="form-control" placeholder="Add New Source Station" formControlName="from">
+                      <span
+        style="color: red;" class="error" *ngIf="addResto.controls.from.touched && addResto.controls.from.errors"> Source Station is required</span>
                     </div>
                 </div><br>
                 <div class="form-group row">
                     <label class="col-lg-3 col-form-label form-control-label">Destination Station:-</label>
                     <div class="col-lg-9">
                       <input type="text" class="form-control" placeholder="Add New Destination Station" formControlName="to">
+                      <span
+        style="color: red;" class="error" *ngIf="addResto.controls.to.touched && addResto.controls.to.errors"> Destination Station is required</span>
                     </div>
                 </div><br>
                 <div class="form-group row">
                   <label class="col-lg-3 col-form-label form-control-label">Sleeper Fare:-</label>
                   <div class="col-lg-9">
                     <input type="text" class="form-control" placeholder="Add New Fair Amount" formControlName="fare">
+                    <span
+        style="color: red;" class="error" *ngIf="addResto.controls.fare.touched && addResto.controls.fare.errors"> Sleeper Fare is required</span>
                   </div>
               </div><br>
               <div class="form-group row">
                 <label class="col-lg-3 col-form-label form-control-label">General Fare:-</label>
                 <div class="col-lg-9">
                   <input type="text" class="form-control" placeholder="Add New Fair Amount" formControlName="gen">
+                  <span
+        style="color: red;" class="error" *ngIf="addResto.controls.gen.touched && addResto.controls.gen.errors"> General Fare is required</span>
                 </div>
             </div><br>
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label">Running Days:-</label>
+              <div class="col-lg-9">
+                <input type="text" class="form-control" placeholder="Add New Fair Amount" formControlName="running">
+                <span
+        style="color: red;" class="error" *ngIf="addResto.controls.running.touched && addResto.controls.running.errors"> Running days is required</span>
+              </div>
+          </div><br>
+
+          <div class="form-group row">
+            <label class="col-lg-3 col-form-label form-control-label">Time:-</label>
+            <div class="col-lg-9">
+              <input type="text" class="form-control" placeholder="Add New Train Time" formControlName="time">
+              <span
+      style="color: red;" class="error" *ngIf="addResto.controls.time.touched && addResto.controls.time.errors"> Running Time is required</span>
+            </div>
+
+        </div><br>
                 <div class="form-group row">
                     <label class="col-lg-3 col-form-label form-control-label"></label>
                     <div class="col-lg-9">

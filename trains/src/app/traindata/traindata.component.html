@@ -7,19 +7,22 @@
       <a routerLink="/adminlogin">Admin</a></div>
     </div></div><br>
    <br><br>
-    <div class="card">
+  
+    <div class="container">
       <div class="bhar">
       <div class="card-body">
 <div class="container>">
+  <br>
 <div class="form-group">
-    <input type="text" [(ngModel)]="text" class="form-control" placeholder="ENTER SOURCE STATION" name="text" >
+  <h3> <pre>  SOURCE STATION</pre></h3>
+    <input type="text" [(ngModel)]="text" class="form-control" placeholder="ENTER SOURCE STATION" name="text" ><br><br>
     <button type="submit" class="btn btn-default" (click)="search()"  
-    >Submit</button>
-    
+    >Submit</button><br><br>
+    <h3> <pre>  DESTINATION STATION</pre></h3>
     <div class="form-group">
       <input type="text" [(ngModel)]="text1" class="form-control" placeholder="ENTER DESTINATION STATION" name="text1" >
       <button type="submit" class="btn btn-default" (click)="search1()"  
-      >Submit</button></div>
+      >Submit</button></div><br>
     </div></div></div>
   </div>
 </div>
@@ -27,7 +30,7 @@
 <br><br>
 <h2 class="kuma">TRAINS LIST</h2><br><br>
 <div class="zxy">
-<div class="generic-container">
+<div class="container">
     <div class="panel panel-default">
       <div class="row">
        
@@ -44,6 +47,8 @@
             <th> DESTINATION STATION</th>
             <th>SLEEPER FARE</th>
             <th>GENERAL FARE</th>
+            <th>RUNNING DAYS</th>
+            <th>RUNNING TIME</th>
           </tr>
           </thead>
           <tbody>
@@ -54,18 +59,15 @@
             <td><span>{{trai.to}}</span></td>
             <td><span>{{trai.fare}}</span></td>
             <td><span>{{trai.gen}}</span></td>
+            <td><span>{{trai.running}}</span></td>
+            <td><span>{{trai.time}}</span></td>
           </tr>
           </tbody>
         </table>
       </div>
     </div>
-  
-
-
-
-
-
-
+  </div>
+<br><br><br><br>
   
   
   <style>
@@ -80,7 +82,19 @@
     border: 1px solid #ccc;
     box-sizing: border-box;
   }
+
+  h3{
+    text-align: center;
+    height: 50px;
+    font-size: xx-large; 
+    
   
+  }
+
+  .jyo{
+    text-align: center;
+  }
+   
   button {
     background-color: #04AA6D;
     color: white;

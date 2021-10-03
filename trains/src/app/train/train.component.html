@@ -1,7 +1,7 @@
 <div class="bha"><h2><marquee>PAKISTAN RAILWAY RESERVATION SYSTEM</marquee></h2>
   <div class="topnav">
       <a routerLink="/Admin">Admin Home</a>
-    <div class="topnav-right"><a routerLink="/home">Logout</a></div>
+    <div class="topnav-right"><a routerLink="/#">Welcome bharath</a><a routerLink="/home">Logout</a></div>
     </div></div>
     
       <h2 class="kumar">TRAINS LIST</h2>
@@ -23,6 +23,8 @@
             <th> DESTINATION STATION</th>
             <th>SLEEPER FARE</th>
             <th>GENERAL FARE</th>
+            <th>RUNNING DAYS</th>
+            <th>RUNNING TIME</th>
             <th>CONTROLS</th>
           </tr>
           </thead>
@@ -34,6 +36,8 @@
             <td><span>{{trai.to}}</span></td>
             <td><span>{{trai.fare}}</span></td>
             <td><span>{{trai.gen}}</span></td>
+            <td><span>{{trai.running}}</span></td>
+            <td><span>{{trai.time}}</span></td>
             <th><button class="cde"><i (click)="deleteResto(trai.train_id)"> DELETE</i></button>
               <button class="cde" routerLink="/update/{{trai.train_id}}"><i> UPDATE</i> </button>
               </th>

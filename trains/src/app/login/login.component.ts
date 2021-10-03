@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AserviceService } from '../service/aservice.service';
 
@@ -13,8 +13,8 @@ export class LoginComponent implements OnInit {
 
   adminlog=new FormGroup(
     {
-        username: new FormControl(''),
-        password: new FormControl(''),
+        username: new FormControl('',Validators.required),
+        password: new FormControl('',Validators.required),
         
     })
     constructor(private httpClientService: AserviceService,private router:Router) { }
@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
         {
           
           (<any>this.router).navigate(["/Admin"]) 
-                
+          alert("Pakistan Railways Welcome you");
         }
     })
     }

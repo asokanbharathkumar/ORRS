@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
   body {font-family: Arial, Helvetica, sans-serif;}
-  form {border: 3px solid #f1f1f1;}
+  form {border: 20px solid #f1f1f1;}
   
   input[type=text], input[type=password] {
     width: 100%;
@@ -50,7 +50,7 @@
   
   .imgcontainer {
     text-align: center;
-    margin: 24px 0 12px 0;
+    margin: 30px 0 12px 0;
   }
   
   img.avatar {
@@ -59,7 +59,7 @@
   }
   
   .container {
-    padding: 16px;
+    padding: 20px;
   }
   
   span.psw {
@@ -79,6 +79,7 @@
   }
   </style>
   <body>
+    <div class="lmno">
   <br>
   <h1 style="text-align: center;">Login Form</h1>
   <br>
@@ -88,16 +89,18 @@
     <div class="container">
       <label >username</label>
       <input type="text" class="form-control" placeholder="Enter username" formControlName="username">
-  
+      <span
+      style="color: red;" class="error" *ngIf="adminlog.controls.username.touched && adminlog.controls.username.errors"> username is required</span><br>
       <label >password</label>
       <input type="password" class="form-control" placeholder="Enter password" formControlName="password">
-          
+      <span
+      style="color: red;" class="error" *ngIf="adminlog.controls.password.touched && adminlog.controls.password.errors"> password is required</span>
       <button type="submit">Login</button>
       
     </div>
   
     
-  </form>
+  </form></div>
   
   </body>
   

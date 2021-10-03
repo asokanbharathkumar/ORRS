@@ -9,6 +9,8 @@ export class Trains {
     public  to: String,
     public  fare: number,
     public  gen:number,
+    public  running:number,
+    public  time:number,
   ) {
   }
 }

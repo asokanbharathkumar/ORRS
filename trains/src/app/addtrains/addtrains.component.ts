@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClientService } from '../service/http-client.service';
 
@@ -12,12 +12,14 @@ export class AddtrainsComponent implements OnInit {
 
   addResto=new FormGroup(
     {
-        train_id: new FormControl(''),
-        train_name: new FormControl(''),
-        from: new FormControl(''),
-        to:new FormControl('') ,
-        fare: new FormControl(''),
-        gen: new FormControl(''),
+        train_id: new FormControl('',Validators.required),
+        train_name: new FormControl('',Validators.required),
+        from: new FormControl('',Validators.required),
+        to:new FormControl('',Validators.required) ,
+        fare: new FormControl('',Validators.required),
+        gen: new FormControl('',Validators.required),
+        running: new FormControl('',Validators.required),
+        time: new FormControl('',Validators.required),
     })
     constructor(private httpClientService: HttpClientService,private router:Router) { }
   

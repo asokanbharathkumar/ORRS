@@ -16,10 +16,3 @@ public class SpringSecurityMongoApplication {
 	}
 
 }
-//Important points
-
-// not able to sign up using same username
-// password validation
-//make sure jwt expires after 30 mins
-//role based authorization using jwt
-//email validation

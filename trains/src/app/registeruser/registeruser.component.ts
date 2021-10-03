@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { EmailValidator, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PassengerregisterService } from '../service/passengerregister.service';
 
@@ -14,15 +14,15 @@ export class RegisteruserComponent implements OnInit {
 
   adminlog=new FormGroup(
     {
-        username: new FormControl(''),
-        password: new FormControl(''),
-        conpassword: new FormControl(''),
-        name: new FormControl(''),
-        dob: new FormControl(''),
-        sex: new FormControl(''),
-        emailid: new FormControl(''),
-        phone: new FormControl(''),
-        address: new FormControl(''),
+        username: new FormControl('',Validators.required),
+        password: new FormControl('',Validators.required),
+        conpassword: new FormControl('',Validators.required),
+        name: new FormControl('',Validators.required),
+        dob: new FormControl('',Validators.required),
+        sex: new FormControl('',Validators.required),
+        emailid: new FormControl('',[Validators.required,Validators.email]),
+        phone: new FormControl('',Validators.required),
+        address: new FormControl('',Validators.required),
         
     })
     constructor(private httpClientService: PassengerregisterService,private router:Router) { }

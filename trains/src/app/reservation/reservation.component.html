@@ -4,56 +4,90 @@
 <div class="topnav">
     <a routerLink="/cancel">Cancellation</a>
     <a routerLink="/user">User Home</a>
-  <div class="topnav-right"><a routerLink="/home">Logout</a></div>
+  <div class="topnav-right"><a routerLink="#">Welcome asokan</a><a routerLink="/home">Logout</a></div>
   </div></div>
-
-
 
   <div class="form_wrapper">
     <div class="form_container">
       <div class="title_container">
         <h4>BOOKING REGISTRATION FORM</h4>
 <form [formGroup]="bookSeats" (ngSubmit)="collectTicks()">
-    <div class="form-group">
+    
+  <div class="form-group">
         <label >Source Station</label>
-        <input type="text" class="form-control" placeholder="Enter Start Station" formControlName="startStation">
-    </div>
+        <select type="select" class="form-control" [(ngModel)]="text" formControlName="startStation">
+          <option></option>
+          <option *ngFor="let trai of trains">{{trai.from}}</option>
+          </select>
+          <a (click)="search()">------------------------------------------------------</a>
+          
+        </div>
+
     <div class="form-group">
         <label >Destination Station</label>
-        <input type="text" class="form-control" placeholder="Enter Destination Station" formControlName="endStation">
+        <select type="radio" class="form-control" [(ngModel)]="text1" formControlName="endStation">
+          <option></option>
+        <option *ngFor="let trai of trains">{{trai.to}}</option>
+        </select>
+        <a (click)="search1()">------------------------------------------------------</a>
     </div>
+
+    
     <div class="form-group">
         <label >Journey Date</label>
         <input type="date" class="form-control" placeholder="Select Your Journey Date" formControlName="date">
+        <span
+        style="color: red;" class="error" *ngIf="bookSeats.controls.date.touched && bookSeats.controls.date.errors"> date is required</span>
     </div>
     <div class="form-group">
         <label >Passenger Name</label>
-        <input type="text" class="form-control" placeholder="Enter Passenger Name" formControlName="name">
-    </div>
+        <input minlength="5" maxlength="20" type="text" class="form-control" placeholder="Enter Passenger Name" formControlName="name">
+        
+        <span
+        style="color: red;" class="error" *ngIf="bookSeats.controls.name.touched && bookSeats.controls.name.errors"> name is required</span>
+      </div>
     <div class="form-group">
         <label >Age</label>
-        <input type="number" class="form-control" placeholder="Enter Your Age" formControlName="age">
+        <input minlength="1" maxlength="2" type="number" class="form-control" placeholder="Enter Your Age" formControlName="age">
+        <span
+        style="color: red;" class="error" *ngIf="bookSeats.controls.age.touched && bookSeats.controls.age.errors"> age is required</span>
     </div>
     <div class="input_field radio_option">
         <label >Gender</label><br>
         <select type="select" name="radiogroup1" id="rd1" formControlName="gender">
           <option>Male</option>
-          <option>FeMale</option>
+          <option>Female</option>
+          <span
+        style="color: red;" class="error" *ngIf="bookSeats.controls.gender.touched && bookSeats.controls.gender.errors"> gender is required</span>
         </select>
         
     </div>
 
     <div class="form-group">
         <label >Mobile Number</label>
-        <input type="number" class="form-control" placeholder="Enter Your Mobile Number" formControlName="phone">
+        <input minlength="10" maxlength="10" type="text" class="form-control" placeholder="Enter Your Mobile Number" formControlName="phone">
+        <span
+        style="color: red;" class="error" *ngIf="bookSeats.controls.phone.touched && bookSeats.controls.phone.errors"> mobile number is required/</span>
+        <span
+        style="color: red;" class="error" *ngIf="bookSeats.controls.phone.touched && bookSeats.controls.phone.errors">mobile number is invalid</span>
     </div>
+
+
     <div class="form-group">
         <label >Email Id</label>
         <input type="email" class="form-control" placeholder="Enter Your Valid Email-Id" formControlName="email">
+        <span
+         style="color: red;" class="error" *ngIf="bookSeats.controls.email.touched && bookSeats.controls.email.errors">Email is invalid,</span>
+         <span
+         style="color: red;" class="error" *ngIf="bookSeats.controls.email.touched && bookSeats.controls.email.errors"> Email is required</span>
     </div>
+
+
     <div class="form-group">
       <label >Address</label>
-      <input type="text" class="form-control" placeholder="Enter Your Address" formControlName="address">
+      <input minlength="5" maxlength="25" type="text" class="form-control" placeholder="Enter Your Address" formControlName="address">
+      <span
+        style="color: red;" class="error" *ngIf="bookSeats.controls.address.touched && bookSeats.controls.address.errors"> Address is required</span>
   </div>
   <div class="input_field radio_option">
       <label >Class</label><br>
@@ -61,17 +95,43 @@
         <option>Sleeper Class</option>
           <option>General Class</option>
         </select>
+        <span
+        style="color: red;" class="error" *ngIf="bookSeats.controls.phone.touched && bookSeats.controls.phone.errors"> Berth class is required</span>
   </div>
 
   
     <div class="form-group">
         <label >Credit Card No</label>
-        <input type="number" class="form-control" placeholder="xxxx-xxxx-xxxx-xxxx" formControlName="credit">
+        <input type="text" maxlength="16" minlength="16" class="form-control" placeholder="xxxx-xxxx-xxxx-xxxx" formControlName="credit">
+        <span
+        style="color: red;" class="error" *ngIf="bookSeats.controls.credit.touched && bookSeats.controls.credit.errors"> credit card number is required</span>
     </div>
+
+    <div class="form-group">
+      <label >Expiry month</label>
+      <input type="text" maxlength="2" minlength="1" class="form-control" placeholder="xx" formControlName="month">
+      <span
+      style="color: red;" class="error" *ngIf="bookSeats.controls.month.touched && bookSeats.controls.month.errors"> Expiry month number is required</span>
+  </div>
+
+  <div class="form-group">
+    <label >Expiry Year</label>
+    <input type="text" maxlength="2" minlength="1" class="form-control" placeholder="xx" formControlName="year">
+    <span
+    style="color: red;" class="error" *ngIf="bookSeats.controls.year.touched && bookSeats.controls.year.errors"> credit card number is required</span>
+</div>
+<div class="form-group">
+  <label >CVV</label>
+  <input type="password" maxlength="3" minlength="3" class="form-control" placeholder="xxx" formControlName="cvv">
+  <span
+  style="color: red;" class="error" *ngIf="bookSeats.controls.cvv.touched && bookSeats.controls.cvv.errors"> CVV number is required</span>
+</div>
 
     <div class="form-group">
         <label >Bank Name</label>
         <input type="text" class="form-control" placeholder="Enter Your Bank Name" formControlName="bankname">
+        <span
+        style="color: red;" class="error" *ngIf="bookSeats.controls.bankname.touched && bookSeats.controls.bankname.errors"> Bamk name is required</span>
     </div>
     <br>
     

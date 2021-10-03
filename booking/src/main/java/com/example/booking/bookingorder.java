@@ -13,7 +13,6 @@ public class bookingorder {
 	
 	@Id
 	private String id;
-	private String quantity;
 	private String startStation;
 	private String endStation;
 	private String name;
@@ -26,6 +25,9 @@ public class bookingorder {
 	private String Date;
 	private String email;
 	private String phone;
+	private String cvv;
+	private String month;
+	private String year;
 
 	
 	public bookingorder() {
@@ -33,13 +35,11 @@ public class bookingorder {
 	}
 
 
-
-	public bookingorder(String id, String quantity, String startStation, String endStation, String name, String age,
-			String gender, String credit, String address, String berth, String bankname, String date, String email,
-			String phone) {
+	public bookingorder(String id, String startStation, String endStation, String name, String age, String gender,
+			String credit, String address, String berth, String bankname, String date, String email, String phone,
+			String cvv, String month, String year) {
 		super();
 		this.id = id;
-		this.quantity = quantity;
 		this.startStation = startStation;
 		this.endStation = endStation;
 		this.name = name;
@@ -52,8 +52,10 @@ public class bookingorder {
 		Date = date;
 		this.email = email;
 		this.phone = phone;
+		this.cvv = cvv;
+		this.month = month;
+		this.year = year;
 	}
-
 
 
 	public String getId() {
@@ -61,23 +63,9 @@ public class bookingorder {
 	}
 
 
-
 	public void setId(String id) {
 		this.id = id;
 	}
-
-
-
-	public String getQuantity() {
-		return quantity;
-	}
-
-
-
-	public void setQuantity(String quantity) {
-		this.quantity = quantity;
-	}
-
 
 
 	public String getStartStation() {
@@ -85,11 +73,9 @@ public class bookingorder {
 	}
 
 
-
 	public void setStartStation(String startStation) {
 		this.startStation = startStation;
 	}
-
 
 
 	public String getEndStation() {
@@ -97,11 +83,9 @@ public class bookingorder {
 	}
 
 
-
 	public void setEndStation(String endStation) {
 		this.endStation = endStation;
 	}
-
 
 
 	public String getName() {
@@ -109,11 +93,9 @@ public class bookingorder {
 	}
 
 
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 
 
 	public String getAge() {
@@ -121,11 +103,9 @@ public class bookingorder {
 	}
 
 
-
 	public void setAge(String age) {
 		this.age = age;
 	}
-
 
 
 	public String getGender() {
@@ -133,11 +113,9 @@ public class bookingorder {
 	}
 
 
-
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
 
 
 	public String getCredit() {
@@ -145,11 +123,9 @@ public class bookingorder {
 	}
 
 
-
 	public void setCredit(String credit) {
 		this.credit = credit;
 	}
-
 
 
 	public String getAddress() {
@@ -157,11 +133,9 @@ public class bookingorder {
 	}
 
 
-
 	public void setAddress(String address) {
 		this.address = address;
 	}
-
 
 
 	public String getBerth() {
@@ -169,11 +143,9 @@ public class bookingorder {
 	}
 
 
-
 	public void setBerth(String berth) {
 		this.berth = berth;
 	}
-
 
 
 	public String getBankname() {
@@ -181,11 +153,9 @@ public class bookingorder {
 	}
 
 
-
 	public void setBankname(String bankname) {
 		this.bankname = bankname;
 	}
-
 
 
 	public String getDate() {
@@ -193,11 +163,9 @@ public class bookingorder {
 	}
 
 
-
 	public void setDate(String date) {
 		Date = date;
 	}
-
 
 
 	public String getEmail() {
@@ -205,11 +173,9 @@ public class bookingorder {
 	}
 
 
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
 
 
 	public String getPhone() {
@@ -217,19 +183,47 @@ public class bookingorder {
 	}
 
 
-
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 
 
+	public String getCvv() {
+		return cvv;
+	}
+
+
+	public void setCvv(String cvv) {
+		this.cvv = cvv;
+	}
+
+
+	public String getMonth() {
+		return month;
+	}
+
+
+	public void setMonth(String month) {
+		this.month = month;
+	}
+
+
+	public String getYear() {
+		return year;
+	}
+
+
+	public void setYear(String year) {
+		this.year = year;
+	}
+
 
 	@Override
 	public String toString() {
-		return "bookingorder [id=" + id + ", quantity=" + quantity + ", startStation=" + startStation + ", endStation="
-				+ endStation + ", name=" + name + ", age=" + age + ", gender=" + gender + ", credit=" + credit
-				+ ", address=" + address + ", berth=" + berth + ", bankname=" + bankname + ", Date=" + Date + ", email="
-				+ email + ", phone=" + phone + "]";
+		return "bookingorder [id=" + id + ", startStation=" + startStation + ", endStation=" + endStation + ", name="
+				+ name + ", age=" + age + ", gender=" + gender + ", credit=" + credit + ", address=" + address
+				+ ", berth=" + berth + ", bankname=" + bankname + ", Date=" + Date + ", email=" + email + ", phone="
+				+ phone + ", cvv=" + cvv + ", month=" + month + ", year=" + year + "]";
 	}
 
 
