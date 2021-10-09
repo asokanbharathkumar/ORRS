@@ -21,15 +21,10 @@ export class ReservationComponent implements OnInit {
         name:new FormControl('',[Validators.required]),
   	    age:new FormControl('',[Validators.required]),
   	    gender:new FormControl('',Validators.required),
-  	    credit:new FormControl('',Validators.required),
 	      address:new FormControl('',Validators.required),
 	      berth:new FormControl('',Validators.required),
-	      bankname:new FormControl('',Validators.required),
         email:new FormControl('',[Validators.required,Validators.email]),
         phone:new FormControl('',Validators.required),
-        cvv:new FormControl('',Validators.required),
-        month:new FormControl('',Validators.required),
-        year:new FormControl('',Validators.required),
         
     })
 
@@ -49,7 +44,7 @@ export class ReservationComponent implements OnInit {
       this.httpClientService.saveResto(this.bookSeats.value).subscribe((result: any)=>{
       console.warn("result",result);
       (<any>this.router).navigate(["/pnr"]) 
-      alert("Your Ticket Has Been Booked")
+      alert("Proceed For Payment")
       })
     }
 

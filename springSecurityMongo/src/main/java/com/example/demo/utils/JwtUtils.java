@@ -18,7 +18,7 @@ public class JwtUtils {
 
 
     private String SECRET_KEY = "secret232422rds43dwadq23424dfsdfsdrfw353w45rw3432sedrfw3423234rw3af";
-
+//taking username from token
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }
@@ -34,23 +34,23 @@ public class JwtUtils {
     private Claims extractAllClaims(String token) {
         return Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(token).getBody();
     }
-
+//checking token is expired before generating new token
     private Boolean isTokenExpired(String token) {
         return extractExpiration(token).before(new Date());
     }
-
+//generate the user token from username
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
         return createToken(claims, userDetails.getUsername());
     }
 
     private String createToken(Map<String, Object> claims, String subject) {
-
+//validating the toker for perticular time
         return Jwts.builder().setClaims(claims).setSubject(subject).setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10))
                 .signWith(SignatureAlgorithm.HS256, SECRET_KEY).compact();
     }
-
+//checking the new token is validated if not token is gerated
     public Boolean validateToken(String token, UserDetails userDetails) {
         final String username = extractUsername(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));

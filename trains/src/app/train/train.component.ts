@@ -19,8 +19,10 @@ export class TrainComponent implements OnInit {
   }
   deleteResto(trai: any)
   {
+    alert("Are You sure to delete train")
     this.trains.splice(trai-1,1)
     this.httpClientService.deleteResto(trai).subscribe((result: any)=>{
+      
       console.warn("result",result)
     })
   }

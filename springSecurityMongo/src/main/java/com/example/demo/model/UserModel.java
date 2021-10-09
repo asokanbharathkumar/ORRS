@@ -28,13 +28,5 @@ public class UserModel {
 	public String getId() {
 		return Id;
 	}
-	
-	
+		
 }
- 
- 
- 
- 
- 
- 
- 

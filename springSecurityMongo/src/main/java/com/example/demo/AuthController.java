@@ -21,6 +21,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @CrossOrigin("http://localhost:4200")
 @RestController
+
 public class AuthController {
 
 	
@@ -45,24 +46,10 @@ public class AuthController {
 	@PostMapping("/subs")
 	private ResponseEntity<AuthenticationResponse>subscribeClient(@RequestBody AuthenticationRequest authreq){
 		UserModel usermodel =new UserModel();
-//		UserModel oldusermodel=new UserModel();
-//		oldusermodel=userrepo.findByusername(authreq.getUsername());
-//		try {
-//			
-//			if (oldusermodel.getUsername() == authreq.getUsername()) {
-//				throw new Exception("Username already present");
-//			}
-//					
-//		}
-//		catch(Exception e) {
-//			return new ResponseEntity<AuthenticationResponse>(new AuthenticationResponse
-//					("Username must be unique ") , HttpStatus.OK);
-//		}
 		
 		usermodel.setUsername(authreq.getUsername());
 		usermodel.setPassword(authreq.getPassword());
-		
-		
+			
 		try {
 			userrepo.save(usermodel);
 		}
@@ -73,10 +60,8 @@ public class AuthController {
 		
 		return new ResponseEntity<AuthenticationResponse>(new AuthenticationResponse
 				("Successful subs for client " +authreq.getUsername()), HttpStatus.OK);
-//		return ResponseEntity.ok(new AuthenticationResponse());
 	}
-	
-	
+		
 	@PostMapping("/auth")
 	private ResponseEntity<?> authenticateClient(@RequestBody AuthenticationRequest authreq){
 		String username=authreq.getUsername();

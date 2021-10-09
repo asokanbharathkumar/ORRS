@@ -8,34 +8,47 @@
   </div>
   </div>
   </div>
-
-
-
-<div class="bbb">
-  <table class="ccc">
-<thead>
-<th>Your Ticket PNR No is</th>
-</thead>
-<tbody >
-  <tr *ngFor="let trai of train; let i=index">
-   
-    <td *ngIf ="i>=train.length -1">{{trai.id}}</td>
-  </tr>
-</tbody>
-</table>
-<br>
-
+  <div class="pipe">
+<br><br><br>
+  <div class="container">
+    
+    <div class="box">
+      <div style="text-align: center; background-color: rgb(25, 32, 88); color: antiquewhite; font-size: large; font: bolder;" ><h4>TICKET DETAILS</h4></div>
+  <table class="table">
+    
+  <thead class="thead-dark">
+  <th scope="col">  PNR No</th>
+  <th scope="col">Source Station</th>
+  <th scope="col">Destination Station</th>
+  <th scope="col">Passenger Name</th>
+  <th scope="col">Age</th>
+  <th scope="col">Gender</th>
+  <th scope="col">Berth Type</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let trai of train; let i=index">
+      <td *ngIf ="i>=train.length -1">{{trai.id}}</td>
+      <td *ngIf ="i>=train.length -1">{{trai.startStation}}</td> 
+      <td *ngIf ="i>=train.length -1">{{trai.endStation}}</td>  
+      <td *ngIf ="i>=train.length -1">{{trai.name}}</td>  
+      <td *ngIf ="i>=train.length -1">{{trai.age}}</td>
+      <td *ngIf ="i>=train.length -1">{{trai.gender}}</td>
+      <td *ngIf ="i>=train.length -1">{{trai.berth}}</td>
+      <a *ngIf ="i>=train.length -1" HREF = "http://localhost:9069/" target="_blank" class="btn btn-success">PayAmount</a>
+    </tr><br>
+  </tbody>
+  </table>
+  </div>
+  <div class="ggg">
+    <br><Br>
+     
+    <button class="btn" title="Print Screen" alt="Print Screen" onclick="window.print();"    target="_blank" style="cursor:pointer;">CLICK HERE TO PRINT TICKET!</button> <br><br>
+    <button class="btn" routerLink="/user">User Home</button>
+    
+  
+  </div><br><br>
 </div>
-<div class="ggg">
-  <button class="btn" routerLink="/user">Return To User Home</button><br><br>
-  <button class="btn" title="Print Screen" alt="Print Screen" onclick="window.print();"    target="_blank" style="cursor:pointer;">CLICK HERE TO PRINT PNR NUMBER!</button>
 </div>
-
-
-<br><br>
-
-
-
 <h3 class="pop">Important Contents</h3>
 <footer class="footer">
   <div class="container">

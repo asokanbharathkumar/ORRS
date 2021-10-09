@@ -1,7 +1,7 @@
 package com.example.demo.model;
 
 public class AuthenticationRequest {
-
+//for authentication
 	private String username;
 	private String password;
 	

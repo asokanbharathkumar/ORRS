@@ -28,27 +28,27 @@ export class HttpClientService{
 
   getTrains(){
       console.log('Test Call');
-      return this.httpClient.get<Trains[]>('http://localhost:8080/Trains');
+      return this.httpClient.get<Trains[]>('http://localhost:8083/Trains');
   }
 
   saveResto(data: any)
   {
-     return this.httpClient.post<Trains[]>('http://localhost:8080/Trains',data)
+     return this.httpClient.post<Trains[]>('http://localhost:8083/Trains',data)
   }
 
   deleteResto(id: any)
   {
-    return this.httpClient.delete<Trains[]>(`${'http://localhost:8080/Trains'}/${id}`)
+    return this.httpClient.delete<Trains[]>(`${'http://localhost:8083/Trains'}/${id}`)
   }
 
   getCurrentResto(id: any)
   {
-    return this.httpClient.get<Trains[]>(`${'http://localhost:8080/Trains'}/${id}`)
+    return this.httpClient.get<Trains[]>(`${'http://localhost:8083/Trains'}/${id}`)
   }
 
   updateResto(id: any,data: any)
   {
-    return this.httpClient.put<Trains[]>(`${'http://localhost:8080/Trains'}/${id}`,data)
+    return this.httpClient.put<Trains[]>(`${'http://localhost:8083/Trains'}/${id}`,data)
   }
 
 }

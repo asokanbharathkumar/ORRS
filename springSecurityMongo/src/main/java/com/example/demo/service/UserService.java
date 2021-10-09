@@ -17,7 +17,7 @@ public class UserService implements UserDetailsService{
 	
 	@Autowired
 	UserRepository userrepo;
-
+//from frontend user name is taken and checked with database,if find placed in new variables,if not return null
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		UserModel foundedUser=userrepo.findByusername(username);

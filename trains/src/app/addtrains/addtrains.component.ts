@@ -36,5 +36,4 @@ export class AddtrainsComponent implements OnInit {
   
   }
 
-
   

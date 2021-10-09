@@ -15,34 +15,50 @@
               <div class="form-group">
                   <label >Train Number</label>
                   <input type="text" class="form-control" placeholder="Update Train Number" formControlName="train_id">
+                  <span
+        style="color: red;" class="error" *ngIf="editResto.controls.train_id.touched && editResto.controls.train_id.errors"> Train Number is required</span>
               </div>
               <div class="form-group">
                   <label >Train Name</label>
                   <input type="text" class="form-control" placeholder="Update Train Name" formControlName="train_name">
+                  <span
+        style="color: red;" class="error" *ngIf="editResto.controls.train_name.touched && editResto.controls.train_name.errors"> Train Name is required</span>
               </div>
               <div class="form-group">
                   <label >Source Station</label>
                   <input type="text" class="form-control" placeholder="Update Source Station" formControlName="from">
+                  <span
+        style="color: red;" class="error" *ngIf="editResto.controls.from.touched && editResto.controls.from.errors"> Source Station is required</span>
               </div>
               <div class="form-group">
                   <label >Destination Station</label>
                   <input type="text" class="form-control" placeholder="Update Destination Station" formControlName="to">
+                  <span
+        style="color: red;" class="error" *ngIf="editResto.controls.to.touched && editResto.controls.to.errors"> Destination Station is required</span>
               </div>
               <div class="form-group">
                   <label >Sleeper Fare</label>
                   <input type="text" class="form-control" placeholder="Update Sleeper Fare" formControlName="fare">
+                  <span
+        style="color: red;" class="error" *ngIf="editResto.controls.fare.touched && editResto.controls.fare.errors"> Sleeper Fare is required</span>
               </div>
               <div class="form-group">
                 <label >General Fare</label>
                 <input type="text" class="form-control" placeholder="Update General Fare" formControlName="gen">
+                <span
+        style="color: red;" class="error" *ngIf="editResto.controls.gen.touched && editResto.controls.gen.errors"> General Fare is required</span>
             </div>
             <div class="form-group">
               <label >Running Days</label>
               <input type="text" class="form-control" placeholder="Update Running Days" formControlName="running">
+              <span
+        style="color: red;" class="error" *ngIf="editResto.controls.running.touched && editResto.controls.running.errors"> Running Days is required</span>
           </div>
           <div class="form-group">
             <label >Running Time</label>
             <input type="text" class="form-control" placeholder="Update Running Time" formControlName="time">
+            <span
+        style="color: red;" class="error" *ngIf="editResto.controls.time.touched && editResto.controls.time.errors"> Running Time is required</span>
         </div>
               <button type="submit" class="btn btn-primary">Update</button>
               </form>

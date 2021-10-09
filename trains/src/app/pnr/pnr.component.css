@@ -1,13 +1,20 @@
 .bbb{
   padding-top: 100px;
-  padding-left: 547px;
+  padding-left: 475px;
   
+}
+
+.pipe{
+	background-color: rgb(245, 220, 188);
 }
 .ccc{
   border: 2px solid ;
   padding: 40px;
 }
 
+.box{
+	border: 2px solid black;
+}
 .ddd{
   background-color: rgb(84, 243, 97);
   

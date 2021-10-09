@@ -1,7 +1,7 @@
 package com.example.demo.model;
 
 public class AuthenticationResponse {
-	
+//authentication response for storing token	
 	private String response;
 
 	public AuthenticationResponse() {
